@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            body {
+                max-width: 590px; 
+                margin: auto; 
+                scroll-snap-type: y mandatory;
+            }
+            img {
+                scroll-snap-align: center;
+            }
+        </style>
+    </head> 
+    <body>
+        <img src="front.jpg">
+        <img src="abstract_1.jpg">
+        <img src="abstract_2.jpg">
+
+        <script>
+            for (let letter = 1072; letter <= 1103; letter++) {
+                const img = document.createElement('img');
+                console.log(String.fromCharCode(letter))
+                img.src = `${String.fromCharCode(letter)}.jpg`;
+                document.body.appendChild(img);
+            }
+        </script>
+    </body>
+</html>
